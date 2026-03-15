@@ -57,7 +57,7 @@ NusaCatch is a full-stack web application built as an Operating Systems midterm 
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
-| Runtime | Node.js 18 LTS | Server-side JavaScript execution |
+| Runtime | Node.js 20 LTS | Server-side JavaScript execution |
 | Framework | Express.js 4 | HTTP routing and middleware |
 | Database | PostgreSQL 12 | Storing users and catches |
 | DB Client | node-postgres (pg) | Connecting Node.js to PostgreSQL |
@@ -532,6 +532,6 @@ This project is licensed under the MIT License.
 
 ## 👤 Author
 
-Built for the Operating Systems Midterm Project.
+Embun Kahuripan and a bit of help from Claude AI 
 
 **NusaCatch** — *Cast your line. Claim the throne.* 🐟
