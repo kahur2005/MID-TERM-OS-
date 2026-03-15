@@ -391,9 +391,9 @@ npm run dev
 | `DB_USER` | PostgreSQL username | `nusauser` |
 | `DB_HOST` | PostgreSQL host | `localhost` |
 | `DB_NAME` | PostgreSQL database name | `nusacatch` |
-| `DB_PASSWORD` | PostgreSQL password | `your_strong_password` |
+| `DB_PASSWORD` | PostgreSQL password |  |
 | `DB_PORT` | PostgreSQL port | `5432` |
-| `JWT_SECRET` | Secret key used to sign JWT tokens — must be long and random | `xK9#mP2@wQ7vR5nT8...` |
+| `JWT_SECRET` | Secret key used to sign JWT tokens — must be long and random |  |
 
 ---
 
