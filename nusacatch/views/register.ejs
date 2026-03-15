@@ -1,0 +1,38 @@
+<%- include('partials/header', { title: 'Register — NusaCatch' }) %>
+<div class="auth-page">
+  <div class="auth-card">
+    <div class="auth-brand">
+      <span class="auth-logo">🐟</span>
+      <h1>NusaCatch</h1>
+      <p>Join the competition</p>
+    </div>
+    <% if (error) { %>
+      <div class="alert alert-error"><%= error %></div>
+    <% } %>
+    <form action="/auth/register" method="POST" class="auth-form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="FisherKing99" required maxlength="50"/>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@email.com" required/>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Min. 6 characters" required minlength="6"/>
+      </div>
+      <div class="form-group">
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat password" required/>
+      </div>
+      <button type="submit" class="btn-primary btn-full">Create Account</button>
+    </form>
+    <p class="auth-switch">Have an account? <a href="/auth/login">Login here</a></p>
+  </div>
+  <div class="auth-visual">
+    <div class="wave-text">Your legend<br/>starts here.</div>
+    <div class="ocean-anim">🌊</div>
+  </div>
+</div>
+<%- include('partials/footer') %>

@@ -1,0 +1,57 @@
+<%- include('partials/header', { title: 'Leaderboard — NusaCatch' }) %>
+<%- include('partials/navbar') %>
+<main class="main-content">
+  <section class="card">
+    <h2 class="card-title page-title">🏆 Hall of Legends</h2>
+    <p class="page-subtitle">The biggest catches in NusaCatch history</p>
+
+    <% if (leaderboard.length === 0) { %>
+      <p class="empty-state">No catches yet. Be the first to submit!</p>
+    <% } else { %>
+      <div class="podium">
+        <% if (leaderboard[1]) { %>
+        <div class="podium-item second">
+          <img src="<%= leaderboard[1].image_path %>" class="podium-img" alt="catch"/>
+          <div class="podium-info"><span class="podium-medal">🥈</span><strong><%= leaderboard[1].username %></strong><span><%= leaderboard[1].fish_name %> &mdash; <%= leaderboard[1].size_inches %>"</span></div>
+          <div class="podium-bar bar-2"></div>
+        </div>
+        <% } %>
+        <% if (leaderboard[0]) { %>
+        <div class="podium-item first">
+          <img src="<%= leaderboard[0].image_path %>" class="podium-img" alt="catch"/>
+          <div class="podium-info"><span class="podium-medal">🥇</span><strong><%= leaderboard[0].username %></strong><span><%= leaderboard[0].fish_name %> &mdash; <%= leaderboard[0].size_inches %>"</span></div>
+          <div class="podium-bar bar-1"></div>
+        </div>
+        <% } %>
+        <% if (leaderboard[2]) { %>
+        <div class="podium-item third">
+          <img src="<%= leaderboard[2].image_path %>" class="podium-img" alt="catch"/>
+          <div class="podium-info"><span class="podium-medal">🥉</span><strong><%= leaderboard[2].username %></strong><span><%= leaderboard[2].fish_name %> &mdash; <%= leaderboard[2].size_inches %>"</span></div>
+          <div class="podium-bar bar-3"></div>
+        </div>
+        <% } %>
+      </div>
+
+      <table class="leaderboard-table full-table">
+        <thead>
+          <tr><th>Rank</th><th>Photo</th><th>Angler</th><th>Fish</th><th>Size</th><th>Weight</th><th>Location</th><th>Date</th></tr>
+        </thead>
+        <tbody>
+          <% leaderboard.forEach(e => { %>
+            <tr class="<%= e.rank <= 3 ? 'top-rank' : '' %>">
+              <td class="rank-cell"><% if (e.rank==1) { %>🥇<% } else if (e.rank==2) { %>🥈<% } else if (e.rank==3) { %>🥉<% } else { %>#<%= e.rank %><% } %></td>
+              <td><img src="<%= e.image_path %>" class="table-catch-img" alt="catch" loading="lazy"/></td>
+              <td><strong><%= e.username %></strong></td>
+              <td><%= e.fish_name %></td>
+              <td class="size-cell"><%= e.size_inches %>"</td>
+              <td><%= e.weight_lbs ? e.weight_lbs + ' lbs' : '—' %></td>
+              <td><%= e.location || '—' %></td>
+              <td><%= new Date(e.submitted_at).toLocaleDateString('id-ID') %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } %>
+  </section>
+</main>
+<%- include('partials/footer') %>
