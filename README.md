@@ -401,13 +401,13 @@ npm run dev
 
 ### Authentication
 
-| Method | Route | Description | Auth Required |
-|--------|-------|-------------|:---:|
-| `GET` | `/auth/login` | Render login page | No |
-| `POST` | `/auth/login` | Submit login form | No |
-| `GET` | `/auth/register` | Render register page | No |
-| `POST` | `/auth/register` | Submit registration form | No |
-| `GET` | `/auth/logout` | Clear session cookie and redirect | No |
+| Method | Route | Description |
+|--------|-------|-------------|
+| `GET` | `/auth/login` | Render login page | 
+| `POST` | `/auth/login` | Submit login form | 
+| `GET` | `/auth/register` | Render register page | 
+| `POST` | `/auth/register` | Submit registration form | 
+| `GET` | `/auth/logout` | Clear session cookie and redirect | 
 
 ### Dashboard & Leaderboard
 
