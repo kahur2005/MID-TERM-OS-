@@ -32,7 +32,6 @@
 - [API Routes](#-api-routes)
 - [File Permissions & Security](#-file-permissions--security)
 - [Troubleshooting](#-troubleshooting)
-- [Screenshots](#-screenshots)
 - [License](#-license)
 
 ---
@@ -522,17 +521,6 @@ pm2 restart nusacatch
 ```
 
 Node.js does not hot-reload. All code changes require a restart.
-
----
-
-## 📸 Screenshots
-
-| Page | Description |
-|------|-------------|
-| `/auth/login` | Login page with ocean theme |
-| `/auth/register` | Registration form |
-| `/dashboard` | Submit catch form + Top 10 preview + My Catches grid |
-| `/leaderboard` | Full leaderboard with 🥇🥈🥉 podium |
 
 ---
 
