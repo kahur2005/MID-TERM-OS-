@@ -165,18 +165,18 @@ sudo systemctl enable postgresql nginx
 
 ---
 
-### 3. Install Node.js 18
+### 3. Install Node.js 20
 
-> ⚠️ Ubuntu 20 ships with Node.js 10 by default. Node 10 is too old for this project. You **must** install Node 18 via NodeSource.
+> ⚠️ Ubuntu 20 ships with Node.js 10 by default. Node 10 is too old for this project. You **must** install Node 20 via NodeSource.
 
 ```bash
 # Download and run the NodeSource setup script
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 
 # Install Node.js (this also installs npm)
 sudo apt install -y nodejs
 
-# Verify — must show v18.x.x or higher
+# Verify — must show v20.x.x or higher
 node -v
 npm -v
 
