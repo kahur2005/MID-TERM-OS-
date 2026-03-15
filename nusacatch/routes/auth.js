@@ -8,12 +8,6 @@ const pool      = require('../config/db');
 const { redirectIfAuth } = require('../middleware/authMiddleware');
 require('dotenv').config();
 
-// ─────────────────────────────────────────────────────────────────────────────
-// WHY BCRYPT_ROUNDS = 8 (not 10):
-// bcrypt cost 10 uses ~300ms CPU + peaks ~50MB RAM per hash.
-// On a low-spec Ubuntu 20 VM this OOM-kills the Node process during register.
-// Cost 8 = ~75ms, still secure for a student/portfolio project.
-// ─────────────────────────────────────────────────────────────────────────────
 const BCRYPT_ROUNDS = 8;
 
 function signToken(user) {
@@ -32,12 +26,12 @@ function setTokenCookie(res, token) {
   });
 }
 
-// ── GET /auth/login ───────────────────────────────────────────────────────
+// ── GET /auth/login 
 router.get('/login', redirectIfAuth, (req, res) => {
   return res.render('login', { error: null });
 });
 
-// ── POST /auth/login ──────────────────────────────────────────────────────
+// ── POST /auth/login 
 router.post('/login', redirectIfAuth, async (req, res) => {
   try {
     const email    = (req.body.email    || '').trim().toLowerCase();
@@ -70,12 +64,12 @@ router.post('/login', redirectIfAuth, async (req, res) => {
   }
 });
 
-// ── GET /auth/register ────────────────────────────────────────────────────
+// ── GET /auth/register 
 router.get('/register', redirectIfAuth, (req, res) => {
   return res.render('register', { error: null });
 });
 
-// ── POST /auth/register ───────────────────────────────────────────────────
+// ── POST /auth/register 
 router.post('/register', redirectIfAuth, async (req, res) => {
   // Everything is inside ONE try/catch.
   // Original bug: validation was outside try/catch — any throw became
@@ -126,7 +120,7 @@ router.post('/register', redirectIfAuth, async (req, res) => {
   }
 });
 
-// ── GET /auth/logout ──────────────────────────────────────────────────────
+// ── GET /auth/logout 
 router.get('/logout', (req, res) => {
   res.clearCookie('token');
   return res.redirect('/auth/login');

@@ -1,6 +1,3 @@
--- NusaCatch Database Schema
--- Run: psql -U nusauser -d nusacatch -f config/schema.sql
-
 CREATE TABLE IF NOT EXISTS users (
     id            SERIAL PRIMARY KEY,
     username      VARCHAR(50)  UNIQUE NOT NULL,

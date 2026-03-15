@@ -1,6 +1,3 @@
-// NusaCatch — main.js
-
-// Show selected filename next to the file input
 const fileInput = document.getElementById('fish_image');
 const fileLabel = document.getElementById('file-name-display');
 if (fileInput && fileLabel) {

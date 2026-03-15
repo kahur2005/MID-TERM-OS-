@@ -40,7 +40,7 @@ function safeUnlink(filePath) {
   catch (e) { console.error('[safeUnlink]', e.message); }
 }
 
-// ── POST /catch/submit ────────────────────────────────────────────────────
+// ── POST /catch/submit
 // FIX: multer is called manually via callback — NOT used as middleware.
 // When used as middleware, multer errors become unhandled rejections on
 // older Node versions and crash the process. The callback form catches them.
@@ -99,7 +99,7 @@ router.post('/submit', requireAuth, (req, res) => {
   });
 });
 
-// ── POST /catch/delete/:id ────────────────────────────────────────────────
+// ── POST /catch/delete/:id
 router.post('/delete/:id', requireAuth, async (req, res) => {
   try {
     const catchId = parseInt(req.params.id, 10);

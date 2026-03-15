@@ -5,7 +5,7 @@ const router  = express.Router();
 const pool    = require('../config/db');
 const { requireAuth, redirectIfAuth } = require('../middleware/authMiddleware');
 
-// GET / → redirect to login
+// GET  redirect to login
 router.get('/', redirectIfAuth, (req, res) => res.redirect('/auth/login'));
 
 // GET /dashboard
