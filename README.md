@@ -2,7 +2,7 @@
 
 > A fishing social competition web app where anglers compete for the biggest catch on the leaderboard.
 
-![Node.js](https://img.shields.io/badge/Node.js-18_LTS-339933?logo=nodedotjs&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-20_LTS-339933?logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-4.x-000000?logo=express&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-12-4169E1?logo=postgresql&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-1.18-009639?logo=nginx&logoColor=white)
