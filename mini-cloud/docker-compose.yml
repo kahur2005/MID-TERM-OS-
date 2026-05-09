@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: mini-cloud-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - controller
+    networks:
+      - mini-cloud-net
+    restart: unless-stopped
+
+  controller:
+    build: ./controller
+    container_name: mini-cloud-controller
+    ports:
+      - "3100:3000"      
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/app/data
+    environment:
+      - PORT=3000
+      - PORT_RANGE_START=4000
+      - PORT_RANGE_END=4999
+      - NETWORK_NAME=mini-cloud-net
+      - SERVICE_IMAGE=mini-cloud-hello
+    networks:
+      - mini-cloud-net
+    restart: unless-stopped
+
+networks:
+  mini-cloud-net:
+    name: mini-cloud-net
+    driver: bridge

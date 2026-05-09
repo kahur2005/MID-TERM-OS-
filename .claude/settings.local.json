@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"d:\\\\GITHUB\\\\nusacatch\\\\MID-TERM-OS-\" -Force)",
+      "Bash(Select-Object Name, FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(npm scripts *)",
+      "Bash(mkdir -p \"d:/GITHUB/nusacatch/MID-TERM-OS-/mini-cloud/controller/routes\" \"d:/GITHUB/nusacatch/MID-TERM-OS-/mini-cloud/controller/lib\" \"d:/GITHUB/nusacatch/MID-TERM-OS-/mini-cloud/services/hello-service\" \"d:/GITHUB/nusacatch/MID-TERM-OS-/mini-cloud/data\")",
+      "Bash(mkdir -p d:/GITHUB/nusacatch/MID-TERM-OS-/docs)"
+    ],
+    "additionalDirectories": [
+      "d:\\GITHUB\\nusacatch\\MID-TERM-OS-\\mini-cloud\\controller",
+      "d:\\GITHUB\\nusacatch\\MID-TERM-OS-\\docs"
+    ]
+  }
+}

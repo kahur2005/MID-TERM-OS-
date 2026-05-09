@@ -1,0 +1,52 @@
+{
+  "instances": {
+    "43beff49": {
+      "id": "43beff49",
+      "name": "web-1",
+      "image": "mini-cloud-hello",
+      "hostPort": 4000,
+      "containerPort": 8080,
+      "cpu": 0.5,
+      "memory": 64,
+      "env": [],
+      "status": "running",
+      "containerId": "7f88818cc1a5941e5a4946d5564c51be2192af81be8b932fb1d06ad4e9ea2dec",
+      "containerName": "mini-cloud-43beff49",
+      "internalIp": "172.18.0.4",
+      "createdAt": "2026-05-08T14:49:17.678Z",
+      "updatedAt": "2026-05-08T14:49:18.005Z"
+    },
+    "f3ea9d8f": {
+      "id": "f3ea9d8f",
+      "name": "web-2",
+      "image": "mini-cloud-hello",
+      "hostPort": 4001,
+      "containerPort": 8080,
+      "cpu": 0.25,
+      "memory": 32,
+      "env": [],
+      "status": "running",
+      "containerId": "5b5f647955b977e9dfc42ceab38d17b2323af779d0072ea1ff3ca7b9bf2e54a4",
+      "containerName": "mini-cloud-f3ea9d8f",
+      "internalIp": "172.18.0.5",
+      "createdAt": "2026-05-08T14:49:47.432Z",
+      "updatedAt": "2026-05-08T14:49:47.739Z"
+    },
+    "2d6dbf94": {
+      "id": "2d6dbf94",
+      "name": "web-3",
+      "image": "mini-cloud-hello",
+      "hostPort": 4002,
+      "containerPort": 8080,
+      "cpu": 0.25,
+      "memory": 32,
+      "env": [],
+      "status": "running",
+      "containerId": "3deef1b256344aafd1e5e59a1477de0972f868a856031dbbeff4412442cc7dba",
+      "containerName": "mini-cloud-2d6dbf94",
+      "internalIp": "172.18.0.6",
+      "createdAt": "2026-05-08T14:53:43.763Z",
+      "updatedAt": "2026-05-09T08:12:29.051Z"
+    }
+  }
+}
